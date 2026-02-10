@@ -1,0 +1,538 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 3, 2);
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #2b2c30;
+    height: 13vh;
+    z-index: 9999;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+#links {
+    margin-right: 3rem;
+}
+
+#links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    background-color: #2b2c30;
+    border-radius: 3rem;
+}
+
+ul[name="gostos"] {
+    grid-area: gostos;
+}
+
+ol[name="conheci"] {
+    grid-area: conheci;
+}
+
+ol[name="vontade"] {
+    grid-area: vontade;
+}
+
+div[name="resumo"] {
+    grid-area: resumo;
+}
+div[name="lugares"]{
+    grid-area: lugares;
+}
+
+img[name="pensador"] {
+    grid-area: pensador;
+}
+
+main {
+    padding-top: 7em;
+    display: block;
+}
+
+#header_main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    background-position: center center;
+    margin: 0 2%;
+    justify-content: space-between;
+    padding: 0rem 7rem;
+    background-color: rgb(15, 15, 15);
+    border-radius: 3rem;
+    padding: 2.5%;
+}
+
+.caixa_portifolio {
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 13rem;
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 10rem;
+    letter-spacing: 1.8rem;
+}
+
+.portifolio:nth-child(2) {
+    margin-left: 20rem;
+}
+
+.portifolio {
+    position: relative;
+    transition: all 0.3s ease;
+    animation: led_portifolio 2s infinite alternate;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    opacity: 0.2;
+    rotate: -10deg;
+}
+
+#caixa_linguagens {
+    background-color: #000000;
+    padding: 2%;
+}
+
+#linguagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+}
+
+#linguagens li {
+    align-items: center;
+    gap: 1rem;
+    display: block;
+    height: auto;
+    width: 20rem;
+}
+
+.img_linguagens {
+    width: 3rem;
+    filter: contrast(1);
+}
+
+#img_java {
+    width: 5rem;
+}
+
+#img_branca {
+    filter: brightness(10);
+}
+
+.caixa_topico {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.caixa_conteudo_ling {
+    opacity: 0;
+    display: none;
+}
+
+.caixa:hover .caixa_conteudo_ling {
+    opacity: 1;
+    display: block;
+}
+
+.compilador {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compilador img {
+    width: 2rem;
+}
+
+.caixa {
+    padding: 2%;
+    margin: 3%;
+    background-color: #423f3f;
+    border-radius: 1rem;
+    margin-top: 8rem;
+}
+
+.caixa li {
+    margin-top: 1vh;
+
+}
+
+.caixa:hover {
+    border: 1px solid;
+    box-shadow: 0 0 10px #0099ff, 0 0 2px #0099ff, 0 0 15px #0099ff;
+    padding: 2%;
+}
+
+#conteudo_main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "gostos"
+        "lugares";
+    gap: 20rem;
+    padding: 2rem;
+
+}
+
+.gostos {
+    background-color: #3a3737;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 90%;
+    margin: 2rem;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.gostos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gostos ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 7rem;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+
+.gostos li {
+    background-color: #252323;
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.gostos li i {
+    font-size: 1.4rem;
+    color: #ff4d4d;
+}
+
+.gostos li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background-color: #303030;
+}
+
+
+.lugares {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.coluna {
+    background-color: #3a3737;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.coluna h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.coluna ol,
+.coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna li {
+    background-color: #252323;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.coluna li img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
+
+.coluna li i {
+    font-size: 1.4rem;
+    color: #ff4d4d;
+}
+
+.coluna li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+
+#titulo_nome {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    z-index: 8888;
+}
+
+.titulo {
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    word-spacing: 1rem;
+}
+
+#links {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 7rem;
+}
+
+#foto_principal {
+    padding: 1%;
+    border-radius: 3rem;
+    background-color: #423f3f;
+    align-items: center;
+    display: block;
+    justify-self: center;
+    font-size: 0.9rem;
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#foto_principal:hover {
+    border: 1px solid;
+    box-shadow: 0 0 10px #0099ff, 0 0 2px #0099ff, 0 0 15px #0099ff;
+}
+
+#foto_principal h1 {
+    animation: led_portifolio 2s infinite alternate;
+
+}
+
+#img_principal {
+    width: 22vw;
+    border-radius: 3rem;
+    height: 70vh;
+}
+
+
+/* #foco {
+    color: transparent;
+    background: url(/img/David&Irmao.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: cover;
+} */
+
+/* ============== ÁREA DO RGB =========*/
+.rgb {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: led 2s infinite alternate;
+}
+
+.complemento {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: opacity 0.4s ease;
+}
+
+/* Quando passa o mouse, o complemento aparece suavemente ao lado */
+.rgb:hover .complemento {
+    opacity: 1;
+    transform: translateX(-20px);
+}
+
+/*======Cores que irão ficar piscando========*/
+#red {
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 45px #ff0000;
+}
+
+#green {
+    color: #00ff00;
+    text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #00ff00;
+}
+
+#blue {
+    color: #0099ff;
+    text-shadow: 0 0 15px #0099ff, 0 0 30px #0099ff, 0 0 45px #0099ff;
+}
+
+/* ===== EFEITO DE PISCAR========== */
+@keyframes led {
+
+    0%,
+    9%,
+    19%,
+    23%,
+    25%,
+    54%,
+    57%,
+    100% {
+        opacity: 1;
+        filter: brightness(1.3);
+    }
+
+    10%,
+    20%,
+    24%,
+    55% {
+        opacity: 0.6;
+        filter: brightness(0.6);
+    }
+}
+
+@keyframes led_portifolio {
+
+    0%,
+    9%,
+    19%,
+    23%,
+    25%,
+    54%,
+    57%,
+    100% {
+        opacity: 0.2;
+        filter: brightness(1.3);
+    }
+
+    10%,
+    20%,
+    24%,
+    33%,
+    55%,
+    78% {
+        opacity: 0.6;
+        filter: brightness(0.6);
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.caixa_img {
+    box-sizing: border-box;
+}
+
+.texto_img {
+    position: absolute;
+    margin-top: 0rem;
+    transform: translate(8%, -250%);
+    color: white;
+    opacity: 0;
+    display: none;
+    font-size: 20px;
+    box-shadow: #423f3f;
+    background-color: #00ff00;
+    box-sizing: border-box;
+    width: 10rem;
+    text-align: center;
+    align-items: center;
+}
+
+.fotos:hover .texto_img {
+    opacity: 1;
+}
+
+.fotos {
+    width: 10rem;
+    border-radius: 3rem;
+}
+
+.fotos_resumo {
+    width: 20vw;
+    border-radius: 3rem;
+    height: 50%;
+}
+
+.fotos:hover {
+    filter: drop-shadow(0 0 2px #00FFFF);
+    transition: all ease 0.6s;
+}
+
+.box_rotate {
+    display: flex;
+    padding: 3%;
+}
+
+#carrosel {
+    display: flex;
+    overflow-x: scroll;
+    gap: 2rem;
+}
+
+#carrosel::-webkit-scrollbar {
+    display: none;
+}
+
+#pensador {
+    width: 25vw;
+}
+
+#pensador:hover {
+    filter: drop-shadow(0 0 10px #00FFFF);
+    transition: all ease 0.6s;
+}
+
+footer {
+    /* display: flex; */
+    background-color: rgb(31, 30, 30);
+    margin: 0;
+    text-align: center;
+    align-items: center;
+}
+
+footer h2 {
+    margin-bottom: 0;
+}
+
+#conteudo_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+}
