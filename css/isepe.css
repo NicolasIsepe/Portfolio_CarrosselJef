@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.linha{
+    width: 95%;
+}
+
+#top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0a6264;
+    color: white;
+    font-size: larger;
+    padding: 1%;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.opcao_menu{
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+.opcao_menu:hover{
+    background-color: #13947d;
+    transform: scale(1.1);
+}
+
+
+#eu{
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+    box-shadow:  2px 2px 10px rgb(183, 183, 183);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#sobre{
+    text-align: justify;
+    width: 30%;
+}
+
+#curiosidades{
+    margin: 0 auto;
+    width: 75%;
+    box-shadow:  2px 2px 10px rgb(183, 183, 183);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#lugares{
+    margin: 0 auto;
+    width: 75%;
+    box-shadow:  2px 2px 10px rgb(183, 183, 183);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#lugares_c{
+    margin: 0 auto;
+    width: 75%;
+    box-shadow:  2px 2px 10px rgb(183, 183, 183);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.titulo{
+    color: #13947d;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#galeria {
+    margin: 0 auto;
+    width: 75%;
+    box-shadow: 2px 2px 10px rgb(183, 183, 183);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#galeria table {
+    margin: 0 auto;
+    border-spacing: 15px;
+}
+
+#galeria img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+#galeria img:hover{
+    transform: scale(1.2);
+    object-fit: contain; 
+}
+
+#voltar{
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    color: white;
+    background-color: #13947d;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#voltar:hover{
+    background-color: #12806c;
+    transform: scale(1.2);
+}
